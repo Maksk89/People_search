@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  birthdate: 2021-02-27
+  loss_date: 2021-02-27 16:34:39
+
+two:
+  name: MyString
+  description: MyText
+  birthdate: 2021-02-27
+  loss_date: 2021-02-27 16:34:39

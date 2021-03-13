@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loss Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loss_places.each do |loss_place| %>
+      <tr>
+        <td><%= loss_place.latitude %></td>
+        <td><%= loss_place.longitude %></td>
+        <td><%= link_to 'Show', loss_place %></td>
+        <td><%= link_to 'Edit', edit_loss_place_path(loss_place) %></td>
+        <td><%= link_to 'Destroy', loss_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loss Place', new_loss_place_path %>

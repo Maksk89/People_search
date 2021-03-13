@@ -1,0 +1,2 @@
+module LossPlacesHelper
+end

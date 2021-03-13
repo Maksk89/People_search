@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @loss_place.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @loss_place.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_loss_place_path(@loss_place) %> |
+<%= link_to 'Back', loss_places_path %>
