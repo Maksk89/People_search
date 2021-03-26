@@ -20,5 +20,10 @@
   <%= @record.loss_date %>
 </p>
 
+<p>
+  <strong>Author:</strong>
+  <%= @record.user.email %>
+</p>
+
 <%= link_to 'Edit', edit_record_path(@record) %> |
 <%= link_to 'Back', records_path %>

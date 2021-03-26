@@ -38,8 +38,14 @@ gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'jquery-rails'
 #Adding simple_form gem
 gem 'simple_form'
+# Adding will_paginate gem
 gem 'will_paginate', '~> 3.3'
-gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+# Adding will_paginate-bootstrap gem
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+# Adding friendly_id gem
+gem 'friendly_id', '~> 5.1'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,8 +59,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Adding better_errors gem
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  # Adding binding_of_caller gem
   gem 'binding_of_caller', '~> 1.0'
+  # Adding amazing_print gem
+  gem 'amazing_print', '~> 1.3'
 end
 
 group :test do

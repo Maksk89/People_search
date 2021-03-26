@@ -1,9 +1,11 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[ show edit update destroy ]
+  after_action :verify_authorized
 
   # GET /records or /records.json
   def index
-    @records = Record.paginate(page: params[:page])
+    @records = Record.paginate(page: params[:page], per_page: 10)
+    authorize @records
   end
 
   # GET /records/1 or /records/1.json
@@ -12,7 +14,8 @@ class RecordsController < ApplicationController
 
   # GET /records/new
   def new
-    @record = Record.new
+    @record = current_user.records.build
+    authorize @record
   end
 
   # GET /records/1/edit
@@ -21,7 +24,8 @@ class RecordsController < ApplicationController
 
   # POST /records or /records.json
   def create
-    @record = Record.new(record_params)
+    @record = current_user.records.build(record_params)
+    authorize @record
 
     respond_to do |format|
       if @record.save
@@ -59,7 +63,8 @@ class RecordsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_record
-      @record = Record.find(params[:id])
+      @record = Record.friendly.find(params[:id])
+      authorize @record
     end
 
     # Only allow a list of trusted parameters through.

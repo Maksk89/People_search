@@ -21,7 +21,9 @@ class LossPlacesController < ApplicationController
 
   # POST /loss_places or /loss_places.json
   def create
-    @loss_place = LossPlace.new(loss_place_params)
+     set_record
+    @loss_place = @record.loss_places.create(params[:latitude, :longitude]).permit(:latitude, :longitude)
+    redirect_to record_path(@record)
 
     respond_to do |format|
       if @loss_place.save
