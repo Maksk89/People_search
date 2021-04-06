@@ -3,4 +3,5 @@ class Record < ApplicationRecord
   has_one :loss_place
   extend FriendlyId
   friendly_id :name, use: :slugged
+  resourcify
 end

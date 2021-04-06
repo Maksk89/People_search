@@ -44,6 +44,9 @@ gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 # Adding friendly_id gem
 gem 'friendly_id', '~> 5.1'
+# Adding ActiveAdmin gem
+gem 'activeadmin'
+
 
 
 
