@@ -19,8 +19,10 @@
     <div><%= record.loss_date %></div>
     <div class="btn-group" role="group" >
       <span><%= link_to 'Show', record, class: "btn btn-secondary mr-1" %></span>
-      <span><%= link_to 'Edit', edit_record_path(record), class: "btn btn-secondary mr-1" %></span>
-      <span><%= link_to 'Destroy', record, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% if has_role?(:admin) %>
+        <span><%= link_to 'Edit', edit_record_path(record), class: "btn btn-secondary mr-1" %></span>
+        <span><%= link_to 'Destroy', record, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
     </div>
 <% end %>
 </div>
