@@ -46,7 +46,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 gem 'friendly_id', '~> 5.1'
 # Adding ActiveAdmin gem
 gem 'activeadmin'
-
+# Fixing the problem with mimemagic gem
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 
 
