@@ -4,6 +4,7 @@ module ActiveAdmin
       def resolve
         scope
       end
+
     end
     def index?
       true
