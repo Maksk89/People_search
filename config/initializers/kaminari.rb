@@ -1,7 +1,8 @@
+# Fix an error with will_paginate and active_admin
 Kaminari.configure do |config|
   config.page_method_name = :per_page_kaminari
 end
-
+# Fix an error with kaminari and active_admin
 if defined?(WillPaginate)
   module WillPaginate
     module ActiveRecord
