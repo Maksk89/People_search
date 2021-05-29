@@ -11,9 +11,18 @@
       Name
       <%= record.name %>
     </div>
-    <p class="text-secondary mb-0"><%= record.description %></p>
-    <div><%= record.birthdate %></div>
-    <div><%= record.loss_date %></div>
+    <p class="text-secondary mb-0">
+      Descrription
+      <%= record.description %>
+    </p>
+    <div>
+    Birthdate
+      <%= record.birthdate %>
+    </div>
+    <div>
+      Loss date
+      <%= record.loss_date %>
+    </div>
     <div class="btn-group" role="group" >
       <span><%= link_to 'Show', record, class: "btn btn-secondary mr-1" %></span>
       <% if has_role?(:admin) %>
