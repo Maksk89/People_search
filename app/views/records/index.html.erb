@@ -3,6 +3,9 @@
   <% if has_role?(:admin) %>
     <%= link_to 'New Record', new_record_path, class: "btn btn-primary" %>
   <% end %>
+  <% if has_role?(:ordinary_user) %>
+    <%= link_to 'Propose Record', propose_path, class: "btn btn-primary" %>
+  <% end %>
 </h4>
 
 <% @records.each do |record| %>

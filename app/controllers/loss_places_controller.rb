@@ -1,4 +1,5 @@
 class LossPlacesController < ApplicationController
+  before_action :set_record
   before_action :set_loss_place, only: %i[ show edit update destroy ]
 
   # GET /loss_places or /loss_places.json
@@ -59,9 +60,13 @@ class LossPlacesController < ApplicationController
   end
 
   private
+
+  def set_record
+    @record = Record.find(params[:record_id])
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_loss_place
-      @loss_place = LossPlace.find(params[:id])
+      @loss_place = @record.loss_places.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

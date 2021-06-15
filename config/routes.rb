@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/home", to: "home#index"
   resources :loss_places
   resources :records
+  get "/propose", to: "records#propose"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "records#index"
 end

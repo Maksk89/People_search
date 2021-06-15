@@ -60,6 +60,11 @@ class RecordsController < ApplicationController
     end
   end
 
+  def propose
+    @record = current_user.records.build
+    authorize @record
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_record

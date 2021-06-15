@@ -23,4 +23,8 @@ class RecordPolicy < ApplicationPolicy
     true
   end
 
+  def propose?
+    true
+  end
+
 end
